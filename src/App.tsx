@@ -1,12 +1,17 @@
 import React from 'react';
 import { BeakerIcon } from '@heroicons/react/24/solid'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from './components/header/Header';
+import Home from './pages/home/Home';
 
 function App() {
   return (
-    <div>
-      <BeakerIcon className="h-6 w-6 text-blue-500"/>
-      <h1>Hello</h1>
-    </div>
+    <BrowserRouter>
+    <Header/>
+      <Routes>
+        <Route path='/*' element={<Home/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
