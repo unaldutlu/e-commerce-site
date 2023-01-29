@@ -1,51 +1,45 @@
-import React, { useState } from "react"
-import { BiShoppingBag } from "react-icons/bi"
-import { AiOutlineClose } from "react-icons/ai"
-import { product } from "../../assets/data/data"
-// import { CartItems } from "./CartItems"
-// import { useSelector } from "react-redux"
+import React, { useState } from "react";
+import { BiShoppingBag } from "react-icons/bi";
+import { AiOutlineClose } from "react-icons/ai";
 
 export const Card = () => {
-  const [cardOpen, setCardOpen] = useState(false)
+  const [cardOpen, setCardOpen] = useState(false);
   const closeCard = () => {
-    setCardOpen(null)
-  }
+    setCardOpen(false);
+  };
 
-  // const quantity = useSelector((state) => state.cart.totalQuantity)
-  // const cartItems = useSelector((state) => state.cart.itemsList)
+  return
+  <>
+    <div className="card" onClick={() => setCardOpen(!cardOpen)}>
+      <BiShoppingBag className="cardIcon" />
+      {/* <span className="flexCenter">{quantity}</span> */}
+    </div>
+    <div className={cardOpen ? "overlay" : "nonoverlay"}></div>
 
-  //total
-  let total = 0
-  // const itemsLists = useSelector((state) => state.cart.itemsList)
-  // itemsLists.forEach((item) => {
-  // total += item.totalPrice
-  // })
-
-  return (
-    <>
-      <div className='card' onClick={() => setCardOpen(!cardOpen)}>
-        <BiShoppingBag className='cardIcon' />
-        <span className='flexCenter'>{quantity}</span>
+    {/* <div className={cardOpen ? "cartItem" : "cardhide"}>
+      <div className="title flex">
+        <h2>Shopping Cart</h2>
+        <button onClick={closeCard}>
+          <AiOutlineClose className="icon" />
+        </button>
       </div>
-      <div className={cardOpen ? "overlay" : "nonoverlay"}></div>
-      <div className={cardOpen ? "cartItem" : "cardhide"}>
-        <div className='title flex'>
-          <h2>Shopping Cart</h2>
-          <button onClick={closeCard}>
-            <AiOutlineClose className='icon' />
-          </button>
-        </div>
-        {cartItems.map((item) => (
-          <CartItems id={item.id} cover={item.cover} name={item.name} price={item.price} quantity={item.quantity} totalPrice={item.totalPrice} />
-        ))}
+      {cartItems.map((item) => (
+        <CartItems
+          id={item.id}
+          cover={item.cover}
+          name={item.name}
+          price={item.price}
+          quantity={item.quantity}
+          totalPrice={item.totalPrice}
+        />
+      ))}
 
-        <div className='checkOut'>
-          <button>
-            <span>Priceed To Checkout</span>
-            <label htmlFor=''>${total}</label>
-          </button>
-        </div>
+      <div className="checkOut">
+        <button>
+          <span>Priceed To Checkout</span>
+          <label htmlFor="">${total}</label>
+        </button>
       </div>
-    </>
-  )
-}
+    </div> */}
+  </>;
+};
