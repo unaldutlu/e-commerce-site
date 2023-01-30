@@ -7,6 +7,16 @@
     @apply rounded-b-lg shadow-md;
   }
 } */
+.cartContent:hover .img::after,
+.cartContent:hover .remove {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.cartContent .details .minus:hover,
+.cartContent .details .plus:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 
 /* header {
   background: #fff;
