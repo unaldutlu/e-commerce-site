@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import CartItems from "./CartItems";
 import { BiShoppingBag } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
+import { product } from "../../assets/data/data";
 
 function Card() {
   const [cardOpen, setCardOpen] = useState(false);
@@ -23,16 +25,16 @@ function Card() {
             <AiOutlineClose className="icon text-2xl" />
           </button>
         </div>
-        {/* {cartItems.map((item) => (
-        <CartItems
-          id={item.id}
-          cover={item.cover}
-          name={item.name}
-          price={item.price}
-          quantity={item.quantity}
-          totalPrice={item.totalPrice}
-        />
-      ))} */}
+        {product.slice(0, 2).map((item) => (
+          <CartItems
+            id={item.id}
+            cover={item.cover}
+            name={item.name}
+            price={item.price}
+          // quantity={item.quantity}
+          // totalPrice={item.totalPrice}
+          />
+        ))}
 
         <div className="checkOut absolute bottom-0 left-0 m-8 w-[88%]">
           <button className="p-5 bg-black w-full text-white rounded-lg text-base disabled:text-[#7a7a7a] disabled:cursor-none">
