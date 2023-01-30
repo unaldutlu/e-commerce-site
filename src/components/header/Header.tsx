@@ -1,6 +1,6 @@
 import Medicine from '../../assets/images/Medicine.svg'
 import { AiOutlineSearch } from 'react-icons/ai';
-// import Card from './Card';
+import Card from './Card';
 import User from './User';
 
 function Header() {
@@ -23,7 +23,7 @@ function Header() {
             <input type="text" placeholder='Search...' className='outline-none p-4 w-full text-base' />
           </div>
           <div className="flex justify-between items-center">
-            {/* <Card /> */}
+            <Card />
             <User />
           </div>
         </div>
