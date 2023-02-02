@@ -6,7 +6,7 @@ function Slider() {
     return (
         <>
             <div className='slider'>
-                <div className='container grid'>
+                <div className='max-w-[95%] m-auto grid gap-5 grid-cols-2 md:grid-cols-4'>
                     {slide.map((item, i) => (
                         <div className='box' key={i}>
                             <div className='img'>
