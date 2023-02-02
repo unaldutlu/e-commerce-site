@@ -12,9 +12,9 @@ function User() {
   const user = true
   const [profileOpen, setProfileOpen] = useState(false)
 
-  // const close = () => {
-  //   setProfileOpen(null)
-  // }
+  const close = () => {
+    setProfileOpen(false)
+  }
 
   // const dispatch = useDispatch()
   // const logoutHandler = (e) => {
@@ -22,7 +22,7 @@ function User() {
   // }
   return (
     <>
-      <div className='profile'>
+      <div className='profile ml-[30px] cursor-pointer'>
         {user ? (
           <>
             <button className='img' onClick={() => setProfileOpen(!profileOpen)}>
@@ -30,11 +30,11 @@ function User() {
             </button>
 
             {profileOpen && (
-              <div className='openProfile boxItems' onClick={close}>
-                <div className='image'>
+              <div className='openProfile boxItems text-[#000] shadow-lg absolute top-20 right-[10px] w-[250px] bg-[#fff] border border-solid border-[#e6e6e6] rounded-xl p-5' onClick={close}>
+                <div className='image flex pb-5'>
                   <Link to='/account'>
                     <div className='img'>
-                      <img src='https://cdn-icons-png.flaticon.com/512/2202/2202112.png' alt='' />
+                      <img src='https://cdn-icons-png.flaticon.com/512/2202/2202112.png' alt='' className="mr-5" />
                     </div>
                   </Link>
                   <div className='text'>
@@ -60,7 +60,8 @@ function User() {
                   <GrHelp className='icon' />
                   <h4>Help</h4>
                 </button>
-                <button className='box' onClick={logoutHandler}>
+                <button className='box'>
+                  {/* onClick={logoutHandler} */}
                   <BiLogOut className='icon' />
                   <h4>Log Out</h4>
                 </button>
