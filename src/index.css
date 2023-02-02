@@ -18,6 +18,41 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.profile button {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.openProfile .box {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+.openProfile .icon {
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.openProfile h4 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.openProfile button:hover {
+  background: rgba(147, 75, 255, 0.075);
+}
+
 /* header {
   background: #fff;
   padding: 20px;
