@@ -1,5 +1,4 @@
 import React from "react"
-import "./slider.css"
 import { slide } from "../../assets/data/data"
 
 function Slider() {
